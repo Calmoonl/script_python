@@ -1,3 +1,9 @@
 INFO:__main__:2025-06-25 11:37:20;https://oriatec.fr;200;UP;Certificat valide jusqu'au 2025-08-18 11:06:48
 INFO:__main__:2025-06-25 11:37:20;https://www.google.com;200;UP;Certificat valide jusqu'au 2025-08-25 08:37:20
 INFO:__main__:2025-06-25 11:37:20;https://vm.cplr.fr;200;UP;Certificat valide jusqu'au 2025-08-24 13:28:23
+INFO:__main__:2025-06-25 11:41:24;https://oriatec.fr;200;UP;Certificat valide jusqu'au 2025-08-18 11:06:48
+INFO:__main__:2025-06-25 11:41:24;https://www.google.com;200;UP;Certificat valide jusqu'au 2025-08-25 08:37:20
+INFO:__main__:2025-06-25 11:41:24;https://vm.cplr.fr;200;UP;Certificat valide jusqu'au 2025-08-24 13:28:23
+INFO:__main__:2025-06-25 11:41:57;https://oriatec.fr;200;UP;Certificat valide jusqu'au 2025-08-18 11:06:48
+INFO:__main__:2025-06-25 11:41:57;https://www.google.com;200;UP;Certificat valide jusqu'au 2025-08-25 08:37:20
+INFO:__main__:2025-06-25 11:41:57;https://vm.cplr.fr;200;UP;Certificat valide jusqu'au 2025-08-24 13:28:23
