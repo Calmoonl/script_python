@@ -14,7 +14,7 @@ parser.add_argument("-a", "--add",nargs=2)
 parser.add_argument("-r", "--remove",nargs=1)
 parser.add_argument("-l", "--list",action="store_true")
 parser.add_argument("-c", "--check",action="store_true")
-parser.add_argument("-e", "--export",nargs=1,action="store_true")
+parser.add_argument("-e", "--export",nargs=1)
 args = parser.parse_args()
 logger = logging.getLogger(__name__)
 
@@ -118,19 +118,24 @@ if args.check:
 if args.export:
     print("Export des résultats")
     url = args.export[0]
+    parsed_url = urlparse(url)
+    domain = parsed_url.netloc
+    domain_name = domain.split('.')[0]
     resultats = []
-    fichier_exp = now.strftime('csv/exports/{url}.csv')
-    with open('logs.txt', 'r', newline='', encoding='utf-8') as file:
-        reader = csv.reader(file)
+    fichier_exp = f'csv/exports/{domain_name}.csv'
+    with open('log.txt', 'r', encoding='utf-8') as file:
+        reader = csv.reader(file, delimiter=';')
         for row in reader:
             if url in row:
                 resultats.append(row)
-    with open(fichier_res, 'w', newline='', encoding='utf-8') as result_file:
+
+    print(resultats)
+    with open(fichier_exp, 'w', newline='', encoding='utf-8') as result_file:
         writer = csv.writer(result_file)
         for resultat in resultats :
             writer.writerow(resultat)
 
-if not (args.add or args.remove or args.list or args.check):
+if not (args.add or args.remove or args.list or args.check  or args.export):
     print("Aucune option spécifiée")
 
 
