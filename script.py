@@ -173,7 +173,6 @@ if args.export:
         for resultat in resultats :
             writer.writerow(resultat)
 
-
 # Si aucun arguent donné : 
 if not (args.add or args.remove or args.list or args.check  or args.export):
     print("Aucune option spécifiée")
